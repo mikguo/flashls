@@ -417,7 +417,7 @@ package org.mangui.hls.stream {
             var _disHeader : FLVData;
             var headercounter : uint = 0;
             var _newheaderTags : Vector.<FLVData> = new Vector.<FLVData>();
-            for (var i : int in _headerTags) {
+            for (var i : int = 0; i < _headerTags.length; i++) {
                 var data : FLVData = _headerTags[i];
                 if ((data.position - (_time_sliding - data.sliding)) < clipping_position) {
                     switch(data.tag.type) {
